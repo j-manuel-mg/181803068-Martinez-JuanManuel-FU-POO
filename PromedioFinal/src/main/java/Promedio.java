@@ -30,7 +30,7 @@ public class Promedio {
         promedio = ((nota1 * .40) + (nota2 * .40) + (nota3 * .20));
         
         System.out.println("El promdeio final del alumno es: " + promedio);
-
+        
     }
-
+    
 }
