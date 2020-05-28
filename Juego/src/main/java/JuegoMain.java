@@ -3,6 +3,7 @@ public class JuegoMain {
     
     public static void main(String[] args) {
         
+        //Instanciar clase
         Ak bronce = new Ak();
         
         System.out.println("Arma de Bronce");
@@ -16,6 +17,9 @@ public class JuegoMain {
         
         System.out.println(bronce.toString());
         
+        System.out.println(bronce.disparar());
+        
+        //----------------------------------------------------------------------
         Ak plata = new Ak();
         
         System.out.println("\nArma de Plata");
@@ -29,6 +33,9 @@ public class JuegoMain {
         
         System.out.println(plata.toString());
         
+        
+        
+        //----------------------------------------------------------------------
         Ak oro = new Ak();
         
         System.out.println("\nArma de Oro");
@@ -42,6 +49,9 @@ public class JuegoMain {
         
         System.out.println(oro.toString());
         
+        
+        
+        //----------------------------------------------------------------------
         Ak diamante = new Ak();
         
         System.out.println("\nArma de Diamante");
@@ -54,6 +64,10 @@ public class JuegoMain {
         diamante.danio = 20;
         
         System.out.println(diamante.toString());
+        
+        //----------------------------------------------------------------------
+        
+        
         
     }
     
