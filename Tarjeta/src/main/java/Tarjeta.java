@@ -31,11 +31,11 @@ public class Tarjeta {
 
         if (nCuenta == 123123 && nip == 1133) {
 
-            return new Tarjeta(123123, "Eduardo Diaz Flores", 31, 12, 2031, 543, 45987.22, 550);
+            return new Tarjeta(123123, "Eduardo Diaz Flores", 1, 1, 2020, 543, 45987.22, 550);
 
         } else if (nCuenta == 456789 && nip == 3377) {
 
-            return new Tarjeta(123123, "Kevin Meza Gonzalez", 31, 12, 2031, 544, 360, 5322.23);
+            return new Tarjeta(456789, "Kevin Meza Gonzalez", 31, 12, 2031, 544, 360, 5322.23);
 
         } else {
 
@@ -54,18 +54,35 @@ public class Tarjeta {
     }
 
     public void retirar(double retirar) {
-        this.monto -= retirar;
+        if (retirar <= this.monto) {
+            this.monto -= retirar;
+            System.out.println("¡Retiro con exito!");
+        } else {
+            System.out.println("¡Saldo insuficiente!");
+        }
     }
-    
-    public void crearApartado(double apartar){
-        this.apartado+= apartar;
-        this.monto -= apartar;
+
+    public void crearApartado(double apartar) {
+        if (apartar > this.monto) {
+            System.out.println("¡Saldo insuficiente!");
+
+        } else {
+            this.apartado += apartar;
+            this.monto -= apartar;
+            System.out.println("¡Apartado realizado con exito!");
+        }
     }
-    
-    public void eliminarApartado(){
+
+    public void eliminarApartado() {
         this.monto += this.apartado;
         this.apartado = 0;
     }
+
+    //
+    public void verificarFecha() {
+        this.anio += 5;
+    }
+    //
 
     @Override
     public String toString() {
@@ -88,5 +105,4 @@ public class Tarjeta {
 
         }
     }
-
 }
