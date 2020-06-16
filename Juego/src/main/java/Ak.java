@@ -29,7 +29,7 @@ public class Ak {
     
     //Metodos --> acciones del objeto
     public String disparar() {
-        return "Te estoy disparando con un daño de " + danio + "bpts";
+        return "Te estoy disparando con un daño de " + danio + " pts";
     }
 
     public void apuntar() {
