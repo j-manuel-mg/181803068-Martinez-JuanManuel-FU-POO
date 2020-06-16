@@ -27,11 +27,6 @@ public class Ak {
         this.danio = danio;
     }
     
-    //Contructor con un parametro
-    public Ak(String tipo){
-        this.tipo = tipo;
-    }
-    
     //Metodos --> acciones del objeto
     public String disparar() {
         return "Te estoy disparando con un daño de " + danio + "bpts";

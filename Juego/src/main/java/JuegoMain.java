@@ -1,74 +1,57 @@
 
+import java.util.Scanner;
+
 public class JuegoMain {
-    
+
     public static void main(String[] args) {
+
+        Scanner dato = new Scanner(System.in);
         
-        //Instanciar clase
-        Ak bronce = new Ak();
+        Persona p1;
+        Persona p2;
         
-        System.out.println("Arma de Bronce");
+        String personaje;
+        int opcion;
         
-        bronce.tipo = "bronce";
-        bronce.cargador = 5;
-        bronce.precision = 75;
-        bronce.velocidadCarga = 5;
-        bronce.precio = 1000;
-        bronce.danio = 10;
+        //Objeto persona1 instanciado
+        System.out.print("\nDigite el nombre del personaje 1: ");
+        personaje = dato.nextLine();
         
-        System.out.println(bronce.toString());
+        p1 = new Persona(personaje);
         
-        System.out.println(bronce.disparar());
+        System.out.println("Que tipo de arma desea usar: ");
+        System.out.println("1.- Bronce");
+        System.out.println("2.- Plata");
+        System.out.println("3.- Oro");
+        System.out.println("4.- Diamante");
+        System.out.println("5.- Adamantium");
+        System.out.print("Opcion: ");
+        opcion = dato.nextInt();
+        p1.equiparArma(opcion);
         
-        //----------------------------------------------------------------------
-        Ak plata = new Ak();
+        dato.nextLine();
         
-        System.out.println("\nArma de Plata");
+        //Objeto persona2 instanciado
+        System.out.print("\nDigite el nombre del personaje 2: ");
+        personaje = dato.nextLine();
         
-        plata.tipo = "plata";
-        plata.cargador = 8;
-        plata.precision = 70;
-        plata.velocidadCarga = 4.5;
-        plata.precio = 2300;
-        plata.danio = 11;
+        p2 = new Persona(personaje);
         
-        System.out.println(plata.toString());
+        System.out.println("Que tipo de arma desea usar: ");
+        System.out.println("1.- Bronce");
+        System.out.println("2.- Plata");
+        System.out.println("3.- Oro");
+        System.out.println("4.- Diamante");
+        System.out.println("5.- Adamantium");
+        System.out.print("Opcion: ");
+        opcion = dato.nextInt();
+        p2.equiparArma(opcion);
         
+        System.out.println(p1.toString());
+        System.out.println(p1.disparar());
         
-        
-        //----------------------------------------------------------------------
-        Ak oro = new Ak();
-        
-        System.out.println("\nArma de Oro");
-        
-        oro.tipo = "Oro";
-        oro.cargador = 10;
-        oro.precision = 85;
-        oro.velocidadCarga = 4.3;
-        oro.precio = 2500;
-        oro.danio = 13;
-        
-        System.out.println(oro.toString());
-        
-        
-        
-        //----------------------------------------------------------------------
-        Ak diamante = new Ak();
-        
-        System.out.println("\nArma de Diamante");
-        
-        diamante.tipo = "Diamante";
-        diamante.cargador = 20;
-        diamante.precision = 95;
-        diamante.velocidadCarga = 3;
-        diamante.precio = 4000;
-        diamante.danio = 20;
-        
-        System.out.println(diamante.toString());
-        
-        //----------------------------------------------------------------------
-        
-        
+        System.out.println(p2.toString());
+        System.out.println(p2.disparar());
         
     }
-    
 }
