@@ -12,30 +12,16 @@ public class Persona {
     public Persona(String nombre) {
         this();
         this.nombre = nombre;
+        this.arma = new Ak();
     }
     
     public void equiparArma(int opcion) {
-        switch (opcion) {
-            case 1:
-                arma = new Ak("Bronce", 5, 75, 5, 1000, 10);
-                break;
-            case 2:
-                arma = new Ak("Plata", 8, 70, 4.5, 2300, 11);
-                break;
-            case 3:
-                arma = new Ak("Oro", 10, 85, 4.3, 2500, 13);
-                break;
-            case 4:
-                arma = new Ak("diamante", 20, 95, 3, 4000, 20);
-                break;
-            case 5:
-                arma = new Ak("Adamantium", 30, 100, 1, 10000, 27);
-                break;
-        }
+        
+        arma = new Ak(opcion);
     }
     
-    public String disparar() {
-        return "Te estoy disparando con un daño de " + arma.danio + " pts";
+    public void recibirDanio(double danio){
+        this.vida -= danio;
     }
     
     @Override

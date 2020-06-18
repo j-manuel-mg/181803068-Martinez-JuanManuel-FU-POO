@@ -7,51 +7,30 @@ public class JuegoMain {
 
         Scanner dato = new Scanner(System.in);
         
-        Persona p1;
-        Persona p2;
+        Persona tristana = new Persona("Tristana");
         
-        String personaje;
-        int opcion;
+        System.out.print(tristana.arma.menuAk());
+         
+        int valor = dato.nextInt();
         
-        //Objeto persona1 instanciado
-        System.out.print("\nDigite el nombre del personaje 1: ");
-        personaje = dato.nextLine();
+        tristana.equiparArma(valor);
         
-        p1 = new Persona(personaje);
+        System.out.println(tristana.toString());
         
-        System.out.println("Que tipo de arma desea usar: ");
-        System.out.println("1.- Bronce");
-        System.out.println("2.- Plata");
-        System.out.println("3.- Oro");
-        System.out.println("4.- Diamante");
-        System.out.println("5.- Adamantium");
-        System.out.print("Opcion: ");
-        opcion = dato.nextInt();
-        p1.equiparArma(opcion);
+        Persona kalista = new Persona("Kalista");
         
-        dato.nextLine();
+        System.out.print(kalista.arma.menuAk());
+         
+        valor = dato.nextInt();
         
-        //Objeto persona2 instanciado
-        System.out.print("\nDigite el nombre del personaje 2: ");
-        personaje = dato.nextLine();
+        kalista.equiparArma(valor);
         
-        p2 = new Persona(personaje);
+        System.out.println(kalista);
         
-        System.out.println("Que tipo de arma desea usar: ");
-        System.out.println("1.- Bronce");
-        System.out.println("2.- Plata");
-        System.out.println("3.- Oro");
-        System.out.println("4.- Diamante");
-        System.out.println("5.- Adamantium");
-        System.out.print("Opcion: ");
-        opcion = dato.nextInt();
-        p2.equiparArma(opcion);
+        System.out.println("El daño que haria es de: " + kalista.arma.disparar());
         
-        System.out.println(p1.toString());
-        System.out.println(p1.disparar());
+        tristana.recibirDanio(kalista.arma.disparar());
         
-        System.out.println(p2.toString());
-        System.out.println(p2.disparar());
-        
+        System.out.println(tristana);
     }
 }
