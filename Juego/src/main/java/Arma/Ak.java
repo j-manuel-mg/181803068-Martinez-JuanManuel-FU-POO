@@ -1,13 +1,9 @@
+package Arma;
 
-public class Ak {
+public class Ak extends Armas {
 
     //Atributo o caracteristicas
     String tipo;
-    int cargador;
-    int precision;
-    double velocidadCarga;
-    double precio;
-    int danio;
 
     //Constructor vacio
     public Ak() {
@@ -92,7 +88,7 @@ public class Ak {
     public double disparar() {
         return (this.danio * this.precision) / 100;
     }
-    
+
     //Metodo predefinido por Java
     @Override
     public String toString() {
