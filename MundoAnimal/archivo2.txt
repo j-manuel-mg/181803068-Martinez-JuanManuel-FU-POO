@@ -1,0 +1,41 @@
+Vaca
+Genero: hembra
+Habitat: campo
+Edad: 35
+Nombre cientifico: bos prinigenious taurus
+Reyno: animalia
+Tipo de alimento: Herbivoro
+Ruido: muuuuu
+Toro
+Genero: macho
+Habitat: campo
+Edad: 22
+Nombre cientifico: bos prinigenious taurus
+Reyno: animalia
+Tipo de alimento: Herbivoro
+Ruido: MUUUU
+
+Leon
+Genero: macho
+Habitat: Sabana
+Edad: 33
+Nombre cientifico: Panthera leo
+Reyno: animalia
+Tipo de alimento: Carnivoro
+Ruido: grrrrr
+Zorro
+Genero: macho
+Habitat: llanuras
+Edad: 100
+Nombre cientifico: vulpes vulpes
+Reyno: animalia
+Tipo de alimento: Carnivoro
+Ruido: uuuaa uuuua
+Chimpance
+Genero: null
+Habitat: null
+Edad: 0
+Nombre cientifico: null
+Reyno: null
+Tipo de alimento: null
+Ruido: Uh Uh Ha Ha
